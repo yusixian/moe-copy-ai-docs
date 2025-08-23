@@ -10,7 +10,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://moe-copy-ai.cosine.ren"),
+  metadataBase: new URL("https://moe.cosine.ren"),
   title: {
     template: "%s | MoeCopy AI",
     default: "MoeCopy AI - 萌萌哒的 AI 网页数据提取助手"
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "MoeCopy AI - 萌萌哒的 AI 网页数据提取助手",
     description: "智能识别并提取网页中的结构化数据，为 AI 模型提供高质量输入",
-    url: "https://moe-copy-ai.cosine.ren",
+    url: "https://moe.cosine.ren/",
     siteName: "MoeCopy AI",
     images: [
       {
