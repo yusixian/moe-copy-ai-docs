@@ -1,0 +1,16 @@
+{
+  "name": "MoeCopy AI 文档",
+  "short_name": "MoeCopy AI",
+  "description": "萌萌哒的 AI 网页数据提取助手官方文档",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
