@@ -3,6 +3,7 @@ import { RootProvider } from "fumadocs-ui/provider"
 import { Inter } from "next/font/google"
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
+import Script from "next/script"
 
 const inter = Inter({
   subsets: ["latin"]
@@ -57,6 +58,15 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN" className={inter.className} suppressHydrationWarning>
+      <head>
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            defer
+            src="https://stats.cosine.ren/script.js"
+            data-website-id="bd8679bb-85aa-4c50-beca-5f8dbd6a66a5"
+          />
+        )}
+      </head>
       <body className="flex min-h-screen flex-col">
         <RootProvider>{children}</RootProvider>
       </body>
