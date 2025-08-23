@@ -6,7 +6,7 @@ export default function HomePage() {
     <main className="flex flex-1 flex-col items-center justify-center px-4 text-center">
       <div className="relative mb-8 flex h-48 w-full items-center justify-center">
         <Image
-          src="/images/banner.webp"
+          src="/img/banner.webp"
           alt="MoeCopy AI Logo"
           objectFit="contain"
           fill

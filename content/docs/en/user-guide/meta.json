@@ -1,7 +1,0 @@
-{
-  "title": "User Guide",
-  "description": "End-user documentation and guides",
-  "icon": "User",
-  "defaultOpen": true,
-  "pages": ["getting-started", "installation", "features", "usage", "faq"]
-}

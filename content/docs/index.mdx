@@ -7,105 +7,48 @@ description: 萌萌哒的 AI 网页数据提取助手官方文档
 
 欢迎来到 MoeCopy AI 的官方文档！这里提供了完整的使用指南、配置说明和开发者资源。
 
+本文档站由 AI 辅助生成，还在 WIP 阶段，如有错误请提交 [Issue](https://github.com/yusixian/moe-copy-ai-docs/issues) 或 [PR](https://github.com/yusixian/moe-copy-ai-docs/pulls) 到文档站～
+
 ## 什么是 MoeCopy AI？
 
-MoeCopy AI 是一款基于 Plasmo 框架开发的浏览器扩展，专门用于智能提取网页中的结构化数据。它集成了先进的 AI 技术，能够自动识别网页内容并提供智能摘要功能。
+MoeCopy AI 是一款基于 Plasmo 框架，使用 xsAI SDK 开发的浏览器扩展，能够智能识别并提取网页中的结构化数据，为 AI 模型提供高质量输入。
 
-### 核心特性
+> 需求很简单，是我想在手机端 kiwi 浏览器访问的时候能够直接复制全文、标题、作者和网页元信息等，排除干扰，然后进行摘要，就类似 [llms.txt](https://llmstxt.org/) 那样。这个项目也算是跟 AI 结合的一个尝试，对代码质量没有很高要求，优先满足需求。
 
-- 🎯 **智能提取**：多层级选择器系统，准确识别文章标题、内容、作者、日期等信息
-- 🤖 **AI 增强**：集成 OpenAI API，提供内容摘要、翻译等智能功能
-- 🌐 **广泛兼容**：支持主流新闻网站、博客、文档站点等各类网页
-- 📱 **移动友好**：完美适配桌面和移动端（Kiwi Browser）
-- 🎨 **精美界面**：现代化设计，支持深浅色主题切换
-- 🔧 **高度可定制**：支持自定义选择器、提示词模板等
+本插件还处于早期开发阶段～欢迎 Star 关注一下。
+
+这个项目也算是跟 AI 结合的一个尝试，所以对代码质量没有很高要求，优先满足需求。并且因为是插件，想尽可能减少包体积（安利 [xsAI](https://github.com/moeru-ai/xsai) 真的超级轻量）和注入网页对原网页的破坏，样式上不做大要求，纯工具性质 side project～
 
 ## 快速导航
 
-### 新手用户
-
-- [🚀 快速开始](/docs/getting-started) - 5分钟上手指南
-- [📦 安装指南](/docs/installation) - 详细安装步骤
-- [❓ 常见问题](/docs/faq) - 解决使用问题
-
-### 进阶用户
-
-- [⚙️ 配置说明](/docs/configuration) - 个性化设置
-- [📖 使用指南](/docs/usage) - 高级功能教程
-- [🔧 API 参考](/docs/api-reference) - 技术文档
+- [🚀 快速开始](/docs/user-guide/getting-started) - 上手指南
+- [📦 安装指南](/docs/user-guide/installation) - 详细安装步骤
+- [❓ 常见问题](/docs/user-guide/faq) - 解决使用问题
+- [⚙️ 配置说明](/docs/user-guide/configuration) - 个性化设置
+- [📖 使用指南](/docs/user-guide/usage) - 高级功能教程
+- [🔧 API 参考](/docs/developer-guide/api-reference) - 技术文档
 
 ### 了解更多
 
 - [✨ 功能特性](/docs/features) - 完整功能介绍
-- [📝 更新日志](/docs/changelog) - 版本历史
-
-## 开始使用
-
-### 第一步：安装扩展
-
-从 Chrome 网上应用店安装 MoeCopy AI：
-
-[🔗 安装扩展](https://chromewebstore.google.com/detail/moe-copy-ai/dfmlcfckmfgabpgbaobgapdfmjiihnck)
-
-### 第二步：体验功能
-
-1. 访问任何文章页面
-2. 点击扩展图标
-3. 查看自动提取的内容
-4. 尝试 AI 摘要功能
-
-### 第三步：个性化配置
-
-根据您的需求调整设置：
-
-- 配置 AI API（可选）
-- 设置自定义选择器
-- 调整界面偏好
-
-## 技术亮点
-
-### 智能选择器系统
-
-MoeCopy AI 使用多级回退的选择器系统：
-
-```
-文章元素 → 自定义选择器 → 默认选择器 → 段落集合 → Body 内容
-```
-
-### AI 集成
-
-- 支持 OpenAI 及兼容 API
-- 流式输出，实时显示结果
-- 自定义提示词模板
-- 使用量统计和历史记录
-
-### 数据处理
-
-- 三种提取模式：选择器、阅读、混合
-- 智能内容清理
-- 多格式导出：JSON、Markdown、文本
-- 完整的元数据提取
-
-## 开源信息
-
-MoeCopy AI 是一个开源项目，使用 MIT 许可证：
-
-- **源码地址**：[GitHub](https://github.com/yusixian/moe-copy-ai)
-- **许可证**：MIT License
-- **贡献指南**：欢迎提交 Issue 和 PR
+- [📝 更新日志](/docs/developer-guide/changelog) - 版本历史
 
 ## 获得帮助
 
 如果您在使用过程中遇到任何问题：
 
 1. 查阅本文档的相关章节
-2. 查看[常见问题](/docs/faq)
+2. 查看[常见问题](/docs/user-guide/faq)
 3. 在 [GitHub Issues](https://github.com/yusixian/moe-copy-ai/issues) 提交问题
 4. 发送邮件至 i@cosine.ren
 
 ## 参与社区
 
-- ⭐ 在 [GitHub](https://github.com/yusixian/moe-copy-ai) 给项目点星
+- ⭐ 在 [GitHub](https://github.com/yusixian/moe-copy-ai) 给项目点个 star 吧～
 - 💬 参与 [Discussions](https://github.com/yusixian/moe-copy-ai/discussions) 讨论
 - 📝 贡献代码或文档
 - 📢 推荐给朋友使用
+
+## License
+
+GNU Affero General Public License version 3 (AGPL-3.0)

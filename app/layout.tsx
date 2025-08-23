@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "MoeCopy AI",
     images: [
       {
-        url: "/images/banner.webp",
+        url: "/img/banner.webp",
         alt: "MoeCopy AI Banner"
       }
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "MoeCopy AI",
     description: "萌萌哒的 AI 网页数据提取助手",
-    images: ["/images/banner.webp"]
+    images: ["/img/banner.webp"]
   },
   icons: {
     icon: "/icon.png",
