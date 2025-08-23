@@ -1,5 +1,5 @@
-import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
-import Image from 'next/image';
+import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared"
+import Image from "next/image"
 
 /**
  * Shared layout configurations
@@ -12,28 +12,23 @@ export const baseOptions: BaseLayoutProps = {
   nav: {
     title: (
       <>
-        <Image
-          src="/icon.png"
-          alt="MoeCopy AI Logo"
-          width={24}
-          height={24}
-          className="mr-2"
-        />
+        <Image src="/icon.png" alt="MoeCopy AI Logo" width={24} height={24} />
         <span className="font-semibold">MoeCopy AI</span>
       </>
-    ),
+    )
   },
   // see https://fumadocs.dev/docs/ui/navigation/links
   links: [
     {
-      text: 'GitHub',
-      url: 'https://github.com/yusixian/moe-copy-ai',
-      external: true,
+      text: "GitHub",
+      url: "https://github.com/yusixian/moe-copy-ai",
+      external: true
     },
     {
-      text: 'Chrome Store',
-      url: 'https://chromewebstore.google.com/detail/moe-copy-ai/dfmlcfckmfgabpgbaobgapdfmjiihnck',
-      external: true,
-    },
+      text: "Chrome Store",
+      url: "https://chromewebstore.google.com/detail/moe-copy-ai/dfmlcfckmfgabpgbaobgapdfmjiihnck",
+      external: true
+    }
   ],
-};
+  githubUrl: "https://github.com/yusixian/moe-copy-ai"
+}
