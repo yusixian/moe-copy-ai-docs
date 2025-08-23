@@ -1,0 +1,323 @@
+---
+title: 配置说明
+description: MoeCopy AI 的详细配置选项和参数说明
+---
+
+# 配置说明
+
+MoeCopy AI 提供了丰富的配置选项，让您可以根据需求定制扩展的行为。
+
+## 访问配置页面
+
+有多种方式打开配置页面：
+
+1. **右键菜单**：右键点击扩展图标 → 选择"选项"
+2. **扩展管理**：在 `chrome://extensions/` 中找到 MoeCopy AI → 点击"详情" → "扩展程序选项"
+3. **快捷入口**：在扩展弹窗中点击设置图标
+
+## 配置选项详解
+
+### 基础设置
+
+#### 抓取模式
+
+选择内容提取的方式：
+
+```typescript
+type ExtractionMode = "selector" | "readability" | "hybrid"
+```
+
+- **selector**：使用 CSS 选择器精确提取
+- **readability**：使用 Mozilla Readability 算法
+- **hybrid**：智能切换，优先选择器
+
+#### 抓取时机
+
+控制何时触发内容提取：
+
+- **自动抓取**：页面加载完成后自动提取
+- **手动抓取**：仅在用户点击时提取
+
+### 界面设置
+
+#### 悬浮按钮
+
+控制页面右下角的快捷入口：
+
+- **显示**：在支持的页面显示悬浮按钮
+- **隐藏**：仅通过扩展图标访问
+
+#### 主题设置
+
+- **跟随系统**：自动适应系统深浅色主题
+- **浅色模式**：始终使用浅色主题
+- **深色模式**：始终使用深色主题
+
+### 选择器配置
+
+#### 内容选择器
+
+用于提取文章正文的 CSS 选择器：
+
+```css
+/* 默认选择器 */
+main, #content, .content, .article-content
+
+/* 自定义示例 */
+.custom-article-body
+#post-content
+div[itemprop="articleBody"]
+```
+
+#### 标题选择器
+
+```css
+/* 默认选择器 */
+h1, meta[property="og:title"]
+
+/* 自定义示例 */
+.article-title
+h1.post-title
+```
+
+#### 作者选择器
+
+```css
+/* 默认选择器 */
+meta[name="author"], [class*="author"]
+
+/* 自定义示例 */
+.author-name
+span.by-author
+```
+
+#### 日期选择器
+
+```css
+/* 默认选择器 */
+meta[property="article:published_time"], time
+
+/* 自定义示例 */
+.publish-date
+time[datetime]
+```
+
+### AI 设置
+
+#### API 配置
+
+配置 AI 服务的连接参数：
+
+```json
+{
+  "apiKey": "your-api-key",
+  "apiUrl": "https://api.openai.com/v1",
+  "model": "gpt-4o-mini",
+  "temperature": 0.7,
+  "maxTokens": 2000
+}
+```
+
+#### 支持的模型
+
+- OpenAI 系列：gpt-4o, gpt-4o-mini, gpt-3.5-turbo
+- 兼容 API：支持任何 OpenAI 兼容的 API 端点
+
+#### 提示词模板
+
+预定义的提示词模板，支持变量替换：
+
+```
+可用变量：
+- {{title}} - 文章标题
+- {{author}} - 作者
+- {{date}} - 发布日期
+- {{content}} - 文章内容
+- {{url}} - 页面 URL
+```
+
+### 开发者设置
+
+#### 日志级别
+
+控制控制台输出的详细程度：
+
+```typescript
+type LogLevel = "debug" | "info" | "error" | "silent"
+```
+
+- **debug**：输出所有调试信息
+- **info**：仅输出重要信息
+- **error**：仅输出错误
+- **silent**：关闭所有日志
+
+#### 调试面板
+
+- **启用**：显示选择器匹配详情
+- **禁用**：隐藏开发者信息
+
+### 高级设置
+
+#### Readability 配置
+
+当使用阅读模式时的参数：
+
+```javascript
+{
+  charThreshold: 500,      // 最小字符数阈值
+  keepClasses: ["highlight", "code"], // 保留的 CSS 类
+  debug: false            // 调试模式
+}
+```
+
+#### 存储配置
+
+```javascript
+{
+  syncStorage: true,      // 使用同步存储
+  historyLimit: 100,      // 历史记录上限
+  autoCleanup: true       // 自动清理旧数据
+}
+```
+
+## 配置文件
+
+### 导出配置
+
+1. 打开选项页面
+2. 点击"导出配置"按钮
+3. 保存 JSON 文件
+
+导出的配置示例：
+
+```json
+{
+  "version": "1.0.0",
+  "settings": {
+    "extractionMode": "hybrid",
+    "scrapeTiming": "manual",
+    "showFloatButton": true,
+    "theme": "auto"
+  },
+  "selectors": {
+    "content": ".article-content, main",
+    "title": "h1.title",
+    "author": ".author-name",
+    "date": "time"
+  },
+  "ai": {
+    "apiUrl": "https://api.openai.com/v1",
+    "model": "gpt-4o-mini",
+    "temperature": 0.7
+  }
+}
+```
+
+### 导入配置
+
+1. 点击"导入配置"按钮
+2. 选择配置文件
+3. 确认导入
+
+## 配置同步
+
+### Chrome 同步
+
+如果登录了 Google 账号，配置会自动同步到其他设备：
+
+- 选择器设置
+- 界面偏好
+- AI 配置（API Key 除外）
+
+### 本地存储
+
+以下数据仅保存在本地：
+
+- AI 聊天历史
+- 临时缓存
+- 调试日志
+
+## 配置优先级
+
+配置的生效优先级从高到低：
+
+1. 页面特定规则（未来功能）
+2. 自定义选择器
+3. 默认选择器
+4. 回退机制
+
+## 性能影响
+
+不同配置对性能的影响：
+
+| 配置项 | 性能影响 | 说明 |
+|--------|----------|------|
+| 自动抓取 | 中 | 每个页面都会触发 |
+| 调试日志 | 低 | 仅影响控制台 |
+| 复杂选择器 | 高 | 避免过于复杂的选择器 |
+| AI 功能 | 无 | 仅在使用时影响 |
+
+## 推荐配置
+
+### 日常使用
+
+```json
+{
+  "extractionMode": "hybrid",
+  "scrapeTiming": "manual",
+  "showFloatButton": true,
+  "logLevel": "error"
+}
+```
+
+### 开发调试
+
+```json
+{
+  "extractionMode": "selector",
+  "scrapeTiming": "manual",
+  "showDebugPanel": true,
+  "logLevel": "debug"
+}
+```
+
+### 移动设备
+
+```json
+{
+  "extractionMode": "readability",
+  "scrapeTiming": "manual",
+  "showFloatButton": false,
+  "theme": "dark"
+}
+```
+
+## 故障排除
+
+### 配置不生效
+
+1. 检查是否保存配置
+2. 刷新目标页面
+3. 重启浏览器
+
+### 同步失败
+
+1. 检查 Chrome 同步设置
+2. 确认存储空间充足
+3. 尝试重新登录账号
+
+### 选择器无效
+
+1. 使用选择器测试工具验证
+2. 检查页面结构是否变化
+3. 尝试更通用的选择器
+
+## 配置备份
+
+建议定期备份重要配置：
+
+1. 导出当前配置
+2. 保存到云存储
+3. 记录自定义选择器
+
+这样在重装或迁移时可以快速恢复设置。

@@ -1,0 +1,11 @@
+{
+  "title": "Developer Documentation",
+  "description": "Technical documentation for developers", 
+  "icon": "Code",
+  "defaultOpen": false,
+  "pages": [
+    "api-reference",
+    "configuration",
+    "changelog"
+  ]
+}

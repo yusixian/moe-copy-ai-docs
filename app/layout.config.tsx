@@ -31,7 +31,7 @@ export const baseOptions: BaseLayoutProps = {
       external: true,
     },
     {
-      text: 'Chrome 商店',
+      text: 'Chrome Store',
       url: 'https://chromewebstore.google.com/detail/moe-copy-ai/dfmlcfckmfgabpgbaobgapdfmjiihnck',
       external: true,
     },

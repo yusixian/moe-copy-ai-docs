@@ -1,0 +1,154 @@
+---
+title: Frequently Asked Questions
+description: Common questions and solutions for MoeCopy AI
+---
+
+# Frequently Asked Questions
+
+Here are the most common questions and solutions when using MoeCopy AI.
+
+## Installation Issues
+
+### Can't find the extension in Chrome Store?
+
+MoeCopy AI is available on the Chrome Web Store. If you can't find it:
+
+1. **Regional restrictions**: Some regions may have limited access
+2. **Search keywords**: Try searching "MoeCopy AI" or "moe copy"
+3. **Direct access**: Use the [direct link](https://chromewebstore.google.com/detail/moe-copy-ai/dfmlcfckmfgabpgbaobgapdfmjiihnck)
+
+### Developer mode installation failed?
+
+Common causes and solutions:
+
+1. **Build failed**
+   ```bash
+   # Clean and reinstall dependencies
+   rm -rf node_modules pnpm-lock.yaml
+   pnpm install
+   pnpm build
+   ```
+
+2. **Node.js version too old**
+   - Ensure Node.js >= 16
+   - Check with `node -v`
+
+3. **Wrong path**
+   - Load extension from `build/chrome-mv3-prod` directory
+   - Not the project root directory
+
+## Usage Issues
+
+### Why can't some websites be extracted?
+
+Possible reasons:
+
+1. **Page not fully loaded**
+   - Wait for complete loading
+   - Try refreshing the page
+
+2. **Dynamic content**
+   - Switch to "manual capture" mode
+   - Wait for content to load before clicking extension
+
+3. **Protected pages**
+   - Some sites (banks, payment pages) restrict extension access
+   - This is a browser security limitation
+
+### Extracted content incomplete or incorrect?
+
+Solutions:
+
+1. **Switch extraction modes**
+   ```
+   Selector Mode → Reading Mode → Hybrid Mode
+   ```
+
+2. **Configure custom selectors**
+   - Open options page
+   - Add site-specific selectors
+   - Validate with test tools
+
+## AI Functionality
+
+### AI features not working?
+
+Troubleshooting steps:
+
+1. **Check API configuration**
+   ```
+   Options → AI Settings → Verify API Key
+   ```
+
+2. **Validate API Key**
+   - Ensure key is correct and valid
+   - Check usage quota
+
+3. **Network connection**
+   - Ensure API endpoint is accessible
+   - Check proxy settings
+
+## Performance Issues
+
+### Extension running slowly?
+
+Optimization methods:
+
+1. **Reduce log output**
+   ```
+   Options → Developer Settings → Log Level → Error/Silent
+   ```
+
+2. **Disable unnecessary features**
+   - Turn off auto-capture
+   - Hide debug panel
+
+## Browser Compatibility
+
+### Unsupported browsers?
+
+Support status:
+
+| Browser | Support | Notes |
+|---------|---------|-------|
+| Chrome | ✅ Full | 88+ versions |
+| Edge | ✅ Full | Chromium-based |
+| Firefox | ❌ No | Different extension APIs |
+| Safari | ❌ No | Not compatible |
+| Kiwi | ✅ Yes | Android only |
+
+## Privacy & Security
+
+### What data does MoeCopy AI collect?
+
+**Does NOT collect**:
+- Browsing history
+- Personal information
+- Web page content
+
+**Local storage only**:
+- User settings
+- AI chat history
+- Custom configurations
+
+### Contact
+
+- **GitHub Issues**: [Report Issues](https://github.com/yusixian/moe-copy-ai/issues)
+- **Email**: i@cosine.ren
+- **Discussions**: [GitHub Discussions](https://github.com/yusixian/moe-copy-ai/discussions)
+
+## Quick Troubleshooting
+
+Checklist when encountering issues:
+
+1. ✓ Extension is latest version
+2. ✓ Page is fully loaded
+3. ✓ No console errors
+4. ✓ Settings saved correctly
+5. ✓ Network connection stable
+
+If problems persist, please provide:
+- Browser version
+- Extension version
+- Problem website URL
+- Error screenshots or logs
