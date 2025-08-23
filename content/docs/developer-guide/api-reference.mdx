@@ -88,17 +88,17 @@ interface ScrapedContent {
   url: string
   author: string
   publishDate: string
-  
+
   // 内容
-  articleContent: string      // 原始 HTML
-  cleanedContent: string      // 清理后的文本
-  
+  articleContent: string // 原始 HTML
+  cleanedContent: string // 清理后的文本
+
   // 元数据
   metadata: Record<string, string>
-  
+
   // 图片
   images: ImageInfo[]
-  
+
   // 选择器结果（调试用）
   selectorResults?: Record<SelectorType, SelectorResultItem[]>
 }
@@ -110,10 +110,10 @@ interface ScrapedContent {
 
 ```typescript
 interface ImageInfo {
-  src: string       // 图片 URL
-  alt: string       // 替代文本
-  title: string     // 标题
-  index: number     // 在文档中的索引
+  src: string // 图片 URL
+  alt: string // 替代文本
+  title: string // 标题
+  index: number // 在文档中的索引
 }
 ```
 
@@ -123,9 +123,9 @@ interface ImageInfo {
 
 ```typescript
 interface SelectorResultItem {
-  selector: string          // 使用的选择器
-  content: string          // 第一个匹配内容
-  allContent?: string[]    // 所有匹配内容
+  selector: string // 使用的选择器
+  content: string // 第一个匹配内容
+  allContent?: string[] // 所有匹配内容
 }
 ```
 
@@ -171,7 +171,7 @@ interface AiChatHistoryItem {
 }
 
 // 存储操作
-const history = await storage.get("aiChatHistory") || { items: [] }
+const history = (await storage.get("aiChatHistory")) || { items: [] }
 history.items.push(newItem)
 await storage.set("aiChatHistory", history)
 ```
@@ -196,13 +196,13 @@ export function formatDate(dateString: string): string
 ```typescript
 // 查找元素
 export function findElements(
-  selectors: string[], 
+  selectors: string[],
   root?: Document | Element
 ): Element[]
 
 // 获取元素文本
 export function getElementText(
-  element: Element, 
+  element: Element,
   options?: { trim?: boolean }
 ): string
 ```
@@ -213,15 +213,15 @@ export function getElementText(
 
 ```typescript
 export function processTemplate(
-  template: string, 
+  template: string,
   variables: Record<string, any>
 ): string
 
 // 使用示例
-const result = processTemplate(
-  "标题：{{title}}\n作者：{{author}}", 
-  { title: "示例文章", author: "张三" }
-)
+const result = processTemplate("标题：{{title}}\n作者：{{author}}", {
+  title: "示例文章",
+  author: "张三"
+})
 ```
 
 ## AI 服务接口
