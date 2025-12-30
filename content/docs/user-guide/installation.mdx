@@ -1,27 +1,7 @@
 ---
 title: 安装指南
-description: 详细的 MoeCopy AI 安装和配置指南
+description: 本指南将详细介绍如何在不同环境下安装和配置 MoeCopy AI。
 ---
-
-# 安装指南
-
-本指南将详细介绍如何在不同环境下安装和配置 MoeCopy AI。
-
-## 系统要求
-
-### 支持的浏览器
-
-- **Chrome**: 版本 88 或更高
-- **Edge**: 版本 88 或更高（基于 Chromium）
-- **Brave**: 最新版本
-- **Kiwi Browser**: Android 移动端支持
-
-### 操作系统
-
-- Windows 10/11
-- macOS 10.14+
-- Linux（各主流发行版）
-- Android（通过 Kiwi Browser）
 
 ## 安装方式
 
@@ -30,18 +10,16 @@ description: 详细的 MoeCopy AI 安装和配置指南
 这是最简单快捷的安装方式：
 
 1. **访问商店页面**
-
    - 打开 [Chrome 网上应用店](https://chromewebstore.google.com/detail/moe-copy-ai/dfmlcfckmfgabpgbaobgapdfmjiihnck)
    - 或在 Chrome 网上应用店搜索 "MoeCopy AI"
 
 2. **安装扩展**
-
    - 点击"添加至 Chrome"按钮
    - 在弹出的权限确认窗口中点击"添加扩展程序"
 
 3. **确认安装**
    - 安装完成后，浏览器右上角会出现 MoeCopy AI 图标
-   - 第一次使用时会自动打开欢迎页面
+   - 建议置顶扩展图标，方便后续使用
 
 ### 方式二：开发者模式安装
 
@@ -96,7 +74,6 @@ pnpm build
 MoeCopy AI 支持在 Android 设备上使用：
 
 1. **安装 Kiwi Browser**
-
    - 从 [Google Play](https://play.google.com/store/apps/details?id=com.kiwibrowser.browser) 下载
    - 或从 [GitHub Releases](https://github.com/kiwibrowser/src.next/releases) 下载 APK
 
@@ -118,13 +95,11 @@ MoeCopy AI 需要以下权限才能正常工作：
 ### 权限用途说明
 
 1. **网页内容访问**
-
    - 仅在用户主动触发时读取页面内容
    - 不会在后台自动收集数据
    - 不会访问密码或敏感表单数据
 
 2. **存储权限**
-
    - 保存自定义选择器配置
    - 存储 AI API 设置
    - 记录 AI 对话历史（本地存储）
@@ -148,7 +123,6 @@ MoeCopy AI 需要以下权限才能正常工作：
 
 1. 在选项页面找到"AI 设置"部分
 2. 填写 API 配置：
-
    - **API Key**: 您的 OpenAI API 密钥
    - **API URL**: API 端点（默认使用 OpenAI）
    - **模型**: 选择使用的模型
@@ -169,14 +143,6 @@ MoeCopy AI 需要以下权限才能正常工作：
 
 如果从 Chrome 网上应用店安装，扩展会自动更新到最新版本。
 
-### 手动更新
-
-开发者模式下：
-
-1. 拉取最新代码：`git pull`
-2. 重新构建：`pnpm build`
-3. 在扩展管理页面点击"更新"按钮
-
 ### 卸载扩展
 
 1. 访问 `chrome://extensions/`
@@ -196,12 +162,6 @@ MoeCopy AI 需要以下权限才能正常工作：
 1. 确保网页已完全加载
 2. 检查是否是受保护的页面（如银行网站）
 3. 尝试刷新页面后重试
-
-### 构建失败
-
-1. 确保 Node.js 版本 >= 16
-2. 删除 `node_modules` 和 `pnpm-lock.yaml`
-3. 重新运行 `pnpm install`
 
 ## 获取帮助
 

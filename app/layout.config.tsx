@@ -28,6 +28,11 @@ export const baseOptions: BaseLayoutProps = {
       text: "Chrome Store",
       url: "https://chromewebstore.google.com/detail/moe-copy-ai/dfmlcfckmfgabpgbaobgapdfmjiihnck",
       external: true
+    },
+    {
+      text: "Feedback & Roadmap",
+      url: "https://moecopy.featurebase.app/",
+      external: true
     }
   ],
   githubUrl: "https://github.com/yusixian/moe-copy-ai"
