@@ -46,6 +46,13 @@ export default function HomePage() {
           className="rounded-lg border border-fd-border bg-fd-background px-6 py-3 font-semibold transition-colors hover:bg-fd-muted">
           GitHub 源码
         </Link>
+
+        <Link
+          href="https://discord.gg/XzvrvNMcSe"
+          target="_blank"
+          className="rounded-lg border border-fd-border bg-fd-background px-6 py-3 font-semibold transition-colors hover:bg-fd-muted">
+          加入 Discord
+        </Link>
       </div>
 
       <div className="mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
