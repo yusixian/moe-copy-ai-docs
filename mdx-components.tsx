@@ -9,11 +9,17 @@ function Badge({ children }: { children: React.ReactNode }) {
   )
 }
 
+// Custom video component to avoid SSR hydration errors
+function Video(props: React.VideoHTMLAttributes<HTMLVideoElement>) {
+  return <video {...props} />
+}
+
 // use this function to get MDX components, you will need it for rendering MDX
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
     Badge,
+    video: Video,
     ...components
   }
 }
