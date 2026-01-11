@@ -41,6 +41,13 @@ export default function HomePage() {
         </Link>
 
         <Link
+          href="https://addons.mozilla.org/zh-CN/firefox/addon/moe-copy-ai/"
+          target="_blank"
+          className="rounded-lg border border-fd-border bg-fd-background px-6 py-3 font-semibold transition-colors hover:bg-fd-muted">
+          Firefox 商店安装
+        </Link>
+
+        <Link
           href="https://github.com/yusixian/moe-copy-ai"
           target="_blank"
           className="rounded-lg border border-fd-border bg-fd-background px-6 py-3 font-semibold transition-colors hover:bg-fd-muted">

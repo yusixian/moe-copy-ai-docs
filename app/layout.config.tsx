@@ -30,6 +30,11 @@ export const baseOptions: BaseLayoutProps = {
       external: true
     },
     {
+      text: "Firefox Store",
+      url: "https://addons.mozilla.org/zh-CN/firefox/addon/moe-copy-ai/",
+      external: true
+    },
+    {
       text: "Feedback & Roadmap",
       url: "https://moecopy.featurebase.app/",
       external: true
