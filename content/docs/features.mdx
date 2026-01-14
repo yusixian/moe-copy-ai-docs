@@ -21,6 +21,7 @@ description: MoeCopy AI 的核心功能介绍
 - **双版本输出**:
   - 原始格式版: 保留 Markdown 格式和原始换行
   - 紧凑版: 清理多余空格换行，优化 AI 模型输入
+- **高质量 Markdown 转换**: <Badge>v0.2.1</Badge> 基于 unified/rehype/remark 解析框架，输出更规范一致
 - **智能清理**: 自动去除干扰元素和无意义内容
 - **字数与 Token 统计**: 显示实际字数和估算的 AI 模型 token 数量，使用 [gpt-tokenizer](https://github.com/niieani/gpt-tokenizer) 分词展示
 - **移动端适配**: 响应式设计，支持移动设备
@@ -80,6 +81,17 @@ description: MoeCopy AI 的核心功能介绍
   - 单独复制某文档的 Markdown 内容
   - **ZIP 打包导出**: 包含 `index.md` 索引文件和 `docs/` 文档文件夹
 
+### 单页抓取
+
+<Badge>v0.2.1 新增</Badge>
+
+原悬浮球功能整合至此，提供更便捷的单页内容提取体验。
+
+- **快速抓取**: 一键提取当前页面内容
+- **AI 总结按钮**: 快速生成内容摘要，无需切换到弹窗
+- **多格式输出**: HTML / Markdown / 纯文本
+- **一键复制**: 快速复制到剪贴板
+
 ### 内容提取
 
 选择页面任意元素，快速提取为多种格式。
@@ -87,6 +99,7 @@ description: MoeCopy AI 的核心功能介绍
 - **可视化选择器**: 鼠标悬停高亮，点击选中
 - **多格式输出**: HTML / Markdown / 纯文本
 - **一键复制**: 快速复制到剪贴板
+- **AI 总结**: <Badge>v0.2.1</Badge> 新增 AI 总结按钮，可直接对提取内容生成摘要
 
 ### 配置选项
 

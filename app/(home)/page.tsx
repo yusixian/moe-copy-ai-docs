@@ -16,14 +16,12 @@ export default function HomePage() {
 
       <h1 className="mb-4 text-4xl font-bold text-fd-foreground">MoeCopy AI</h1>
 
-      <p className="mb-8 max-w-2xl text-xl text-fd-muted-foreground">
-        ✨ 萌萌哒的 AI 网页数据提取助手 ✨
+      <p className="mb-4 max-w-2xl text-xl font-medium text-fd-foreground">
+      ✨ 萌萌哒的 AI 网页数据提取助手 ✨
       </p>
 
-      <p className="mb-8 max-w-3xl text-lg text-fd-muted-foreground">
-        基于 Plasmo
-        框架开发的浏览器扩展，能够智能识别并提取网页中的结构化数据，为 AI
-        模型提供高质量输入。
+      <p className="mb-8 max-w-3xl text-base text-fd-muted-foreground">
+        基于 Plasmo 框架开发的浏览器扩展，支持智能识别网页结构化数据、批量抓取、AI 内容摘要，为 AI 模型提供高质量输入
       </p>
 
       <div className="flex flex-wrap justify-center gap-4">
@@ -62,26 +60,45 @@ export default function HomePage() {
         </Link>
       </div>
 
-      <div className="mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
-        <div className="text-left">
-          <h3 className="mb-2 text-lg font-semibold">🚀 智能提取</h3>
-          <p className="text-fd-muted-foreground">
-            自动识别文章主体、标题、作者和发布日期，支持多种抓取模式
+      <div className="mt-16 grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="rounded-lg border border-fd-border bg-fd-card p-6 text-left transition-shadow hover:shadow-lg">
+          <h3 className="mb-3 text-xl font-bold text-fd-foreground">
+            智能内容提取
+          </h3>
+          <p className="mb-3 text-sm text-fd-muted-foreground">
+            自动识别文章主体、标题、作者和发布日期，支持选择器、Readability 和混合三种抓取模式
           </p>
+          <ul className="space-y-1 text-sm text-fd-muted-foreground">
+            <li>• 高质量 Markdown 转换</li>
+            <li>• 字数与 Token 统计</li>
+            <li>• 图片与元数据提取</li>
+          </ul>
         </div>
 
-        <div className="text-left">
-          <h3 className="mb-2 text-lg font-semibold">🤖 AI 增强</h3>
-          <p className="text-fd-muted-foreground">
-            集成 xsAI SDK，支持自定义 AI 摘要提示词，智能处理内容
+        <div className="rounded-lg border border-fd-border bg-fd-card p-6 text-left transition-shadow hover:shadow-lg">
+          <h3 className="mb-3 text-xl font-bold text-fd-foreground">
+            批量抓取处理
+          </h3>
+          <p className="mb-3 text-sm text-fd-muted-foreground">
+            侧边栏模式支持批量抓取多个链接，可视化选择器与智能链接提取
           </p>
+          <ul className="space-y-1 text-sm text-fd-muted-foreground">
+            <li>• 正则过滤与 8 种预设规则</li>
+            <li>• 三种抓取策略可选</li>
+            <li>• ZIP 打包导出文档</li>
+          </ul>
         </div>
 
-        <div className="text-left">
-          <h3 className="mb-2 text-lg font-semibold">📱 移动适配</h3>
-          <p className="text-fd-muted-foreground">
-            响应式设计，完美支持 Kiwi 等移动端浏览器使用
+        <div className="rounded-lg border border-fd-border bg-fd-card p-6 text-left transition-shadow hover:shadow-lg">
+          <h3 className="mb-3 text-xl font-bold text-fd-foreground">AI 智能增强</h3>
+          <p className="mb-3 text-sm text-fd-muted-foreground">
+            集成 xsAI SDK，支持自定义 AI 摘要提示词和内容智能处理
           </p>
+          <ul className="space-y-1 text-sm text-fd-muted-foreground">
+            <li>• 内容摘要与总结</li>
+            <li>• 自定义提示词变量</li>
+            <li>• 摘要历史记录</li>
+          </ul>
         </div>
       </div>
     </main>
