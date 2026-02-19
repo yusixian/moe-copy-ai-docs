@@ -35,24 +35,30 @@ description: 记录 MoeCopy AI 的所有版本更新、新功能、改进和修�
 - [GitHub Discussions](https://github.com/yusixian/moe-copy-ai/discussions)
 - 邮箱：i@cosine.ren
 
-## [v0.3.5] - 2026-02-08
+## [v0.3.7] - 2026-02-19
+
+发现商店里发错版本了orz 发成别的分支的版本了，所以重新发了一版。
+
+## [v0.3.6] - 2026-02-14
+
+[Release Notes](https://github.com/yusixian/moe-copy-ai/releases/tag/0.3.6)
+
+- feat(ai): 升级 xsAI SDK 从 0.2.0-beta.3 到 0.4.3，适配新的同步 streamText API 和 ReadableStream 文本流
+- feat(ai): 新增 AI Provider 快速选择组件，支持 10 个主流 AI 服务商一键切换 (OpenAI, Anthropic, Gemini, DeepSeek, xAI, Ollama, Mistral, Groq, Perplexity, OpenRouter)
+- refactor: 替换 markdown-it 为 marked，抽取共享 renderMarkdown 工具函数
+- perf: 多处组件性能优化 — useMemo/useCallback 包裹、ScrapeResultItem 子组件拆分、useStorage 替代手动 fetch、callbackRef 模式
+
+* v0.3.6 by @yusixian in https://github.com/yusixian/moe-copy-ai/pull/45
+
+## [v0.3.5] - 2026-02-05
 
 [Release Notes](https://github.com/yusixian/moe-copy-ai/releases/tag/0.3.5)
 
-新增完整的 Prompt Template 管理功能，支持预设模版和自定义模版，让 AI 摘要更加灵活。
+新增完整的 Prompt Template 管理功能，包含 9 个预设模版和自定义模版 CRUD，支持在 AI 摘要面板、批量摘要、设置页和侧边栏中选择/管理模版。
 
-<img width="1383" alt="Prompt Template Manager" src="https://r2.cosine.ren/i/2026/02/c9b63e5b248226dbd560969277b41f0a.webp" />
+![](https://r2.cosine.ren/i/2026/02/c9b63e5b248226dbd560969277b41f0a.webp)
 
-* v0.3.5 by @yusixian in https://github.com/yusixian/moe-copy-ai/pull/41
-
-### 新功能
-
-- **Prompt Template 管理** — 全新的模版系统，轻松管理和切换 AI 提示词
-  - 内置 9 个预设模版，覆盖常用摘要场景
-  - 支持自定义模版的创建、编辑、删除（CRUD）
-  - 在 AI 摘要面板、批量摘要、设置页和侧边栏中均可选择/管理模版
-
-**Full Changelog**: https://github.com/yusixian/moe-copy-ai/compare/0.3.4...0.3.5
+* v0.3.5 by @yusixian in https://github.com/yusixian/moe-copy-ai/pull/42
 
 ## [v0.3.4] - 2026-02-04
 
